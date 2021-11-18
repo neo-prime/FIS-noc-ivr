@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1808491446:1634121744461" name="ServiceNowAPI" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="responseBody">{Data.Element.ServiceNowAPI.response_body}</data>
+<data create_when="Before" name="incidentname">{Data.Session.incidentNumber}</data>
+<data create_when="Before" name="state">{Data.Session.incidentState}</data>
+<data create_when="Before" name="comment">{Data.Session.incidentComment}</data>
+<data create_when="After" name="responseStatus">{Data.Element.ServiceNowAPI.status_code}</data>
+</log>
+<settings>
+<setting name="EndpointURL">https://fisindiadev.service-now.com/api/fisi/ivr_integration_noc/updateinc</setting>
+<setting name="HTTPMethod">PUT</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">true</setting>
+<setting name="userName">srv.cisco_ivr</setting>
+<setting name="password">BR@134_XDmbr55</setting>
+<setting name="headers">'Content-Type':'application/json'</setting>
+<setting name="body">{"number":"{Data.Session.incidentNumber}","state":"{Data.Session.incidentState}","comments":"{Data.Session.incidentComment}"}</setting>
+<setting name="useProxy">true</setting>
+<setting name="proxyHost">10.192.76.131</setting>
+<setting name="proxyPort">8080</setting>
+<setting name="connectTimeout">10000</setting>
+<setting name="readTimeout">10000</setting>
+</settings>
+</config>
+</action_element>

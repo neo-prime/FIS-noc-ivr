@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<subdialog_start id="Element@1153038025:1634121645110" name="SubDialog Start" version="6.0.1">
+<config>
+<settings>
+<setting name="Parameter"/>
+<setting name="Where">Session Data</setting>
+</settings>
+</config>
+</subdialog_start>
